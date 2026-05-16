@@ -7,10 +7,7 @@ const {
 // GET /api/admin/requests — returns all requests with student + document info
 const getAllRequestsAdmin = async (req, res) => {
     try {
-        // FIX #6: was querying "SELECT * FROM requests" — wrong table name.
-        //         Table lives in drs schema: drs.document_requests
-        //         Now uses request_model which queries the view drs.v_request_details
-        //         so it includes student name and document name via JOINs.
+
         const requests = await getAllRequests()
         res.json(requests)
     } catch (err) {
