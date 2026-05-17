@@ -1,11 +1,3 @@
-// FIX #8: was importing { register } from '../controllers/user_controller'
-//         but user_controller.js exports { getRequests, addRequest, editRequest }
-//         There is NO register function there — that lives in auth_controller.
-//         user_routes is now removed in favor of auth_routes for registration.
-//
-// If you still want a separate /api/users route for profile management,
-// keep this file and add profile endpoints here.
-
 const express = require('express')
 const router = express.Router()
 const { protect } = require('../middleware/auth_middleware')

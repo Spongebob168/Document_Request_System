@@ -9,9 +9,6 @@ const {
   softDelete
 } = require('../controllers/request_controller')
 
-// FIX #5: was using "let requests = []" in-memory array — total data loss on restart.
-//         Now wired to the real PostgreSQL database via the controller.
-
 // GET  /api/requests       — student sees their own requests only
 router.get('/', protect, authorizeRoles('student', 'admin'), getMyRequests)
 

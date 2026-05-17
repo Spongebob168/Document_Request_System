@@ -32,8 +32,6 @@ const submitRequest = async (req, res) => {
             quantity = 1
         } = req.body
 
-        // FIX #3: req.user.id → req.user.userId
-        // FIX #4: params now match request_model.createRequest signature exactly
         const request = await createRequest(
             req.user.userId,   // user_id
             documentTypeId,    // document_type_id

@@ -10,7 +10,6 @@ const getAllRequests = async () => {
 }
 
 // ── GET BY USER (student sees own requests only) ──────────────────────────────
-// FIX #1: was missing — students had no way to fetch only their requests
 const getRequestsByUserId = async (user_id) => {
     const result = await pool.query(
         `

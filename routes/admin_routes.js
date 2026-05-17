@@ -1,10 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-// FIX #7: auth_middleware exports { protect, authorizeRoles } — NOT a default export.
-//         Old code did: const authMiddleware = require('../middleware/auth_middleware')
-//         Then used authMiddleware directly as middleware — this passes the whole
-//         module OBJECT as middleware, which crashes at runtime.
 const { protect, authorizeRoles } = require('../middleware/auth_middleware')
 
 const {

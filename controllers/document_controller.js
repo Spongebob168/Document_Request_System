@@ -1,6 +1,4 @@
-// FIX #9: document_model.js existed with getDocumentTypes() but had no
-//         controller or route — students couldn't fetch available document types,
-//         making the request form impossible to populate.
+
 
 const { getDocumentTypes } = require('../models/document_model')
 
